@@ -32,5 +32,4 @@ renderToSVG :: FilePath -> WaveDrom -> IO ()
 renderToSVG fp wd = withSystemTempFile "wavedrom.json" $ \json jsonHandle -> do
   BS.hPutStr jsonHandle (encode (toJSON wd))
   hClose jsonHandle
-  runProcess_ $ proc "wavedrom-cli" ["--input", json, "--svg", fp]
-
+  runProcess_ $ proc "wavedrompy" ["--input", json, "--svg", fp]
