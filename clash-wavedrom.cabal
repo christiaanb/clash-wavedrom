@@ -46,7 +46,7 @@ library
     , ghc-typelits-natnormalise
     , lens
     , lens-aeson
-    , singletons
+    , singletons < 3.0
     , temporary
     , text
     , typed-process
@@ -76,7 +76,7 @@ test-suite test
     , ghc-typelits-natnormalise
     , lens
     , lens-aeson
-    , singletons
+    , singletons < 3.0
     , tasty
     , tasty-discover
     , tasty-golden
